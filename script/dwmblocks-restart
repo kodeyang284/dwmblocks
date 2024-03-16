@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if pgrep -x dwmblocks 2>&1 >/dev/null; 
+then 
+  printf "Killing old dwmblocks ..."
+  pkill -KILL -x dwmblocks
+  printf "done.\n"
+fi
+
+dwmblocks 2>&1 >/dev/null &
